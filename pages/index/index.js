@@ -58,27 +58,29 @@ Page({
   getJinJingState: function () {
     var _that = this;
     wx.request({
-      url: "https://api.jinjingzheng.zhongchebaolian.com/enterbj/platform/enterbj/entercarlist",
-      data: {
-        appkey: 'kkk',
-        userid: "1DD36174392C4DBB95941CEBFA60ADC6",
-        acc: 'E34036F213B04754811689FD52ADF069',
-        deviceid: 'ddd',
-        token: '290EA66D9ECC4096D959C0BB4838B819',
-        timestamp: '1511956923615000'
-      },
-      method: 'POST',
+      url: "https://enterbj.zhongchebaolian.com/enterbj/platform/enterbj/curtime_03",
+      method: 'GET',
       header: {
-        'content-type': 'application/x-www-form-urlencoded',
-        'Referere': 'https://api.jinjingzheng.zhongchebaolian.com/enterbj/jsp/enterbj/index.jsp'
+        'Host': 'enterbj.zhongchebaolian.com',
+        'Connection': 'keep-alive',
+        'Pragma': 'no-cache',
+        'Cache-Control': 'no-cache',
+        'Upgrade-Insecure-Requests': '1',
+        'User-Agent': 'Mozilla/5.0 (Linux; Android 7.0; MI 5 Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 Mobile Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+        'Referer': 'https://enterbj.zhongchebaolian.com/enterbj/platform/enterbj/toVehicleType',
+        'Accept-Encoding': 'gzip, deflate',
+        'Accept-Language': 'zh-CN,en-US;q=0.8',
+        'Cookie': 'JSESSIONID=5F9CAA1A713B817DCD8C03D730C1405E; UM_distinctid=15ec7ad338672-0758eb2f67658a-12797d23-38400-15ec7ad338716a; CNZZDATA1260761932=1788518962-1499394672-https%253A%252F%252Fenterbj.zhongchebaolian.com%252F%7C1507934398',
+        'X-Requested-With': 'com.zcbl.bjjj_driving',
       },
       success: function (res) {
         wx.hideLoading()
         _that.setData({
           //设置进京证状态
-          message3: "状态码" + res.statusCode,
+          message3: JSON.stringify(res.data).includes("排队人数过多") ?"不能办理":'可以办理',
         })
-        console.log(res.data)
+        console.log(JSON.stringify(res))
       },
       fail: function () {
         wx.hideLoading()

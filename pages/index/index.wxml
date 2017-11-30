@@ -4,9 +4,16 @@
     <view class="text1">北京交警APP进京证办理提醒功能</view>
     <view class="text2">{{message}}</view>
     <view class="text2">{{message2}}</view>
-     <view class="text2">{{message3}}</view>
-     <view class="text3">{{message4}}</view>
-     <view class="text4">上次可用17小时之前</view>
+    <view class="text2">{{message3}}</view>
+    <view class="text3">{{message4}}</view>
   </view>
-  <button bindtap="changeItemInObject">获取限行信息</button>
+  <view class="qrcodeparent">
+    <!--想要让imageview居中必须设置父view-->
+    <image class='qrcode' mode="aspectFill" src='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFU8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyQTJkN01zQ2ZlNjAxMDAwMGcwN0MAAgTJTx9aAwQAAAAA'></image>
+  </view>
+  <view class="qrcodeparent">
+    <view class='text4'>扫描关注开启后台通知</view>
+  </view>
+
+
 </view>

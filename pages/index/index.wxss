@@ -2,7 +2,7 @@
 
 .userinfo {
   width: 90%;
-  margin:20px auto;
+  margin: 20px auto;
   height: 450rpx;
   background-image: url(http://downza.img.zz314.com/edu/pc/txyy-1010/2017-08-22/d91d8b64dc046a9ffed931d213995fcf.jpg);
   border-radius: 7px;
@@ -12,8 +12,8 @@
   width: 100%;
   height: 10000rpx;
   background-color: gainsboro;
-  position:relative;
-  padding-top:1px;
+  position: relative;
+  padding-top: 1px;
 }
 
 .text1 {
@@ -29,19 +29,30 @@
   font-size: 15px;
 }
 
-
 .text3 {
   font-size: 12px;
-  margin-top: 15px;
+  margin-top: 25px;
   color: white;
-  text-align:right;
-  padding-right:10px;
+  text-align: right;
+  padding-right: 10px;
 }
+
+.qrcode {
+  width: 200px;
+  height: 200px;
+  border-radius: 7px;
+}
+
+.qrcodeparent {
+  width: 250;
+  height: 250;
+  display: flex;
+  justify-content: center;
+}
+
 
 .text4 {
   font-size: 12px;
-  margin-top: 10px;
-  color: white;
-  text-align:right;
-  padding-right:10px;
+  margin-top: 25px;
+  color: blueviolet;
 }
