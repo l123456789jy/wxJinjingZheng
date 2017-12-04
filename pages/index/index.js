@@ -129,6 +129,12 @@ Page({
     console.log('点击我了')
   },
 
+  openPhoto: function () {
+    wx.previewImage({
+      current: '', // 当前显示图片的http链接
+      urls: ['https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFU8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyQTJkN01zQ2ZlNjAxMDAwMGcwN0MAAgTJTx9aAwQAAAAA'] // 需要预览的图片http链接列表
+    })
+  }
 
 
 })

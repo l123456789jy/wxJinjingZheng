@@ -4,7 +4,7 @@
   width: 90%;
   margin: 20px auto;
   height: 450rpx;
-  background-image: url(http://downza.img.zz314.com/edu/pc/txyy-1010/2017-08-22/d91d8b64dc046a9ffed931d213995fcf.jpg);
+  background-color: goldenrod;
   border-radius: 7px;
 }
 

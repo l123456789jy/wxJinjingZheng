@@ -9,7 +9,7 @@
   </view>
   <view class="qrcodeparent">
     <!--想要让imageview居中必须设置父view-->
-    <image class='qrcode' mode="aspectFill" src='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFU8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyQTJkN01zQ2ZlNjAxMDAwMGcwN0MAAgTJTx9aAwQAAAAA'></image>
+    <image class='qrcode' mode="aspectFill" bindtap="openPhoto" src='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFU8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyQTJkN01zQ2ZlNjAxMDAwMGcwN0MAAgTJTx9aAwQAAAAA'></image>
   </view>
   <view class="qrcodeparent">
     <view class='text4'>扫描关注开启后台通知</view>
